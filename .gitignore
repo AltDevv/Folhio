@@ -1,0 +1,188 @@
+# Environment / secrets
+.env
+.env.*
+*.env
+!.env.example
+!*.env.example
+
+# Credentials / signing keys
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.crt
+*.der
+key.properties
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+service-account*.json
+credentials*.json
+secret*.json
+token*.json
+
+# Local AI / agent workspace
+.agents/
+.codex/
+.codex-run/
+
+# Virtual environments
+.venv/
+*.venv/
+**/.venv/
+venv/
+env/
+
+# IDE / local machine
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Flutter / Dart
+front/.dart_tool/
+front/.flutter-plugins
+front/.flutter-plugins-dependencies
+front/build/
+front/android/.gradle/
+front/android/local.properties
+front/android/app/release/
+front/android/app/profile/
+front/ios/Flutter/Generated.xcconfig
+front/ios/Flutter/flutter_export_environment.sh
+front/ios/Flutter/ephemeral/
+front/linux/flutter/ephemeral/
+front/macos/Flutter/ephemeral/
+front/windows/flutter/ephemeral/
+front/**/generated_plugin_registrant.*
+front/**/GeneratedPluginRegistrant.*
+*.apk
+*.aab
+*.ipa
+
+# Java / Maven
+back(api)/target/
+back(api)/.env
+back(api)/.env.*
+back(api)/logs/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+**/.cache/
+
+# Local storage and generated data
+storage/
+**/storage/
+!back(api)/src/main/java/com/folhio/api/files/storage/
+!back(api)/src/main/java/com/folhio/api/files/storage/*.java
+uploads/
+**/uploads/
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.mv.db
+*.trace.db
+
+# Internal/private Folhio modules not meant for the public repo
+admin-web/
+backEnd/src/main/resources/static/studio/
+back(api)/src/main/java/com/folhio/api/studio/
+backEnd/document-processing/
+
+# Private material creation assets
+back(api)/src/main/java/com/folhio/api/materials/
+back(api)/src/test/java/com/folhio/api/materials/
+back(api)/src/main/resources/material-templates/
+back(api)/src/main/java/com/folhio/api/materials/DadosIniciaisMaterial.java
+# Private modules after centralizing backend layers
+back(api)/src/main/java/com/folhio/api/controller/EstudioController.java
+back(api)/src/main/java/com/folhio/api/controller/EstudioWebController.java
+back(api)/src/main/java/com/folhio/api/controller/MaterialController.java
+back(api)/src/main/java/com/folhio/api/entity/MaterialGerado.java
+back(api)/src/main/java/com/folhio/api/entity/ModeloDocxMaterial.java
+back(api)/src/main/java/com/folhio/api/entity/QuestaoMaterial.java
+back(api)/src/main/java/com/folhio/api/repository/MaterialGeradoRepository.java
+back(api)/src/main/java/com/folhio/api/repository/ModeloDocxMaterialRepository.java
+back(api)/src/main/java/com/folhio/api/repository/QuestaoMaterialRepository.java
+back(api)/src/main/java/com/folhio/api/service/MaterialGeradoService.java
+back(api)/src/main/java/com/folhio/api/service/CatalogoMaterialService.java
+back(api)/src/main/java/com/folhio/api/dto/material/
+back(api)/src/main/java/com/folhio/api/config/DadosIniciaisMaterial.java
+back(api)/src/main/java/com/folhio/api/processing/generation/CriacaoMaterialService.java
+back(api)/src/main/java/com/folhio/api/processing/generation/QuestaoMaterialOllamaService.java
+back(api)/src/main/resources/material-questions/
+back(api)/src/main/resources/question-bank/
+back(api)/src/main/resources/private-templates/
+backEnd/material-generator/private/
+backEnd/material-generator/question-bank/private/
+backEnd/material-generator/samples/output/
+
+# Heavy/private local models
+back(api)/models/
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# Local launchers / machine-specific helpers
+front/folhio.local.ps1
+front/folhio.local.bat
+*.local.ps1
+*.local.bat
+*.local.json
+*.local.yaml
+*.local.yml
+*.local.properties
+
+# Spring profiles local or sensitive
+back(api)/src/main/resources/application-local.properties
+back(api)/src/main/resources/application-local.yml
+back(api)/src/main/resources/application-dev.local.properties
+back(api)/src/main/resources/application-prod.properties
+back(api)/src/main/resources/application-prod.yml
+back(api)/src/main/resources/application-secrets.properties
+back(api)/src/main/resources/application-secrets.yml
+
+# Logs/temp/dumps
+/logs/
+/tmp/
+/temp/
+back(api)/logs/
+back(api)/tmp/
+back(api)/temp/
+front/logs/
+front/tmp/
+front/temp/
+*.log
+*.tmp
+*.bak
+*.backup
+*.dump
+*.pid
+
+# Document processing runtime output/caches, kept out of Git
+backEnd/document-processing/layout-ai/tmp/
+backEnd/document-processing/ocr-python/tmp/
+backEnd/document-processing/ocr-python/.venv/
+backEnd/document-processing/ocr-python/.cache/
+backEnd/document-processing/ocr-python/models-cache/
+backEnd/document-processing/ocr-python/models/**/*.bin
+backEnd/document-processing/ocr-python/models/**/*.onnx
+backEnd/document-processing/ocr-python/models/**/*.pt
+backEnd/document-processing/ocr-python/models/**/*.pth
+backEnd/document-processing/ocr-python/models/**/*.safetensors
+backEnd/document-processing/ocr-python/models/**/*.pdmodel
+backEnd/document-processing/ocr-python/models/**/*.pdiparams
+backEnd/document-processing/mineru-runtime/config/*.local.json
+backEnd/document-processing/mineru-runtime/output/
+backEnd/document-processing/mineru-runtime/models-cache/
