@@ -68,6 +68,8 @@ front/windows/flutter/ephemeral/
 front/**/generated_plugin_registrant.*
 front/**/GeneratedPluginRegistrant.*
 
+front/**/generated_plugins.cmake
+
 *.apk
 *.aab
 *.ipa
