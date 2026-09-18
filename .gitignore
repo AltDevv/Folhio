@@ -1,4 +1,3 @@
-
 # Environment / secrets
 .env
 .env.*
@@ -28,6 +27,11 @@ credentials*.json
 secret*.json
 token*.json
 
+# Local AI / agent workspace
+.agents/
+.codex/
+.codex-run/
+
 # Virtual environments
 .venv/
 *.venv/
@@ -39,60 +43,84 @@ env/
 .idea/
 .vscode/
 *.iml
+*.ipr
+*.iws
 
-# OS
+# OS / temporary editor files
 .DS_Store
 Thumbs.db
-
-
+*.swp
 
 # Flutter / Dart
+
+# Flutter tooling
 front/.dart_tool/
 front/.flutter-plugins
 front/.flutter-plugins-dependencies
+front/.pub/
+front/.pub-cache/
 front/build/
+front/coverage/
 
+# Flutter generated documentation
+front/**/doc/api/
+
+# Flutter metadata de build
+front/**/ios/Flutter/.last_build_id
+
+# Android generated/local files
 front/android/.gradle/
 front/android/local.properties
-front/android/app/release/
+front/android/app/debug/
 front/android/app/profile/
+front/android/app/release/
 
+# iOS generated files
 front/ios/Flutter/Generated.xcconfig
 front/ios/Flutter/flutter_export_environment.sh
 front/ios/Flutter/ephemeral/
 
+# Desktop generated files
 front/linux/flutter/ephemeral/
 front/macos/Flutter/ephemeral/
 front/windows/flutter/ephemeral/
 
 front/**/generated_plugin_registrant.*
 front/**/GeneratedPluginRegistrant.*
-
 front/**/generated_plugins.cmake
 
+# Flutter build / symbol files
 *.apk
 *.aab
 *.ipa
+app.*.symbols
+app.*.map.json
 
-
+# Dart / editor / build temp
+front/.atom/
+front/.build/
+front/.buildlog/
+front/.history/
+front/.svn/
+front/.swiftpm/
+front/migrate_working_dir/
 
 # Java / Maven
 backEnd/target/
 backEnd/logs/
 
-
+*.class
 
 # Python
 __pycache__/
 **/__pycache__/
 
+*.pyc
 *.py[cod]
 
 .pytest_cache/
 .cache/
 **/.cache/
-
-
 
 # Local storage and generated data
 storage/
@@ -112,8 +140,6 @@ uploads/
 *.mv.db
 *.trace.db
 
-
-
 # Internal/private Folhio modules
 admin-web/
 
@@ -122,8 +148,6 @@ backEnd/src/main/resources/static/studio/
 
 # Processamento de documentos local/privado
 backEnd/document-processing/
-
-
 
 # Private material creation modules
 backEnd/src/main/java/com/folhio/api/controller/EstudioController.java
@@ -159,16 +183,13 @@ backEnd/material-generator/private/
 backEnd/material-generator/question-bank/private/
 backEnd/material-generator/samples/output/
 
-
-
-# Heavy/private local AI models
+# Heavy / private local AI models
 backEnd/models/
+
 *.onnx
 *.pt
 *.pth
 *.safetensors
-
-
 
 # Local launchers / machine-specific helpers
 front/folhio.local.ps1
@@ -181,8 +202,6 @@ front/folhio.local.bat
 *.local.yml
 *.local.properties
 
-
-
 # Spring profiles local / sensitive
 backEnd/src/main/resources/application-local.properties
 backEnd/src/main/resources/application-local.yml
@@ -194,8 +213,6 @@ backEnd/src/main/resources/application-prod.yml
 
 backEnd/src/main/resources/application-secrets.properties
 backEnd/src/main/resources/application-secrets.yml
-
-
 
 # Logs / temp / dumps
 /logs/
@@ -216,31 +233,3 @@ front/temp/
 *.backup
 *.dump
 *.pid
-
-
-
-# Document-processing runtime output / caches
-#
-# OBS:
-# backEnd/document-processing/ já está completamente ignorado acima.
-# Estas regras ficam aqui caso no futuro você decida versionar parte dele.
-#
-
-backEnd/document-processing/layout-ai/tmp/
-
-backEnd/document-processing/ocr-python/tmp/
-backEnd/document-processing/ocr-python/.venv/
-backEnd/document-processing/ocr-python/.cache/
-backEnd/document-processing/ocr-python/models-cache/
-
-backEnd/document-processing/ocr-python/models/**/*.bin
-backEnd/document-processing/ocr-python/models/**/*.onnx
-backEnd/document-processing/ocr-python/models/**/*.pt
-backEnd/document-processing/ocr-python/models/**/*.pth
-backEnd/document-processing/ocr-python/models/**/*.safetensors
-backEnd/document-processing/ocr-python/models/**/*.pdmodel
-backEnd/document-processing/ocr-python/models/**/*.pdiparams
-
-backEnd/document-processing/mineru-runtime/config/*.local.json
-backEnd/document-processing/mineru-runtime/output/
-backEnd/document-processing/mineru-runtime/models-cache/
